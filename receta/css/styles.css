@@ -1,0 +1,116 @@
+/****************************************************/
+/*          Hoja de estilo receta.html            */
+/*          autor: Álvaro Leiva                     */
+/*          versión: 1.0                            */
+/*          fecha: 17/10/2023                       */
+/*          comentario: Trabajo l. marcas           */
+/****************************************************/
+
+:root {
+  --title-color: #9a3b3b;
+  --text-color: #c08261;
+  --bg-color: #f2ecbe;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightblue;
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+}
+
+h2,
+h3 {
+  color: var(--title-color);
+}
+
+blockquote {
+  border-left: 4px solid purple;
+  padding: 0 0.5rem;
+  font-style: italic;
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+#wrapper {
+  background-color: var(--bg-color);
+  margin: auto;
+  width: 80%;
+  padding: 2rem;
+}
+
+.titulo {
+  text-align: center;
+  border-bottom: 2px solid purple;
+}
+
+/* Main */
+.main {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+.main .parte-2 {
+}
+
+/* Main ingredientes */
+.ingredientes {
+  height: 100%;
+  width: 100%;
+}
+
+.ingredientes h2 {
+  font-size: xx-large;
+}
+
+.ingredientes li {
+  font-size: larger;
+}
+
+/* Main imagenes */
+.imagenes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.imagenes img {
+  object-fit: cover;
+  height: 10rem;
+}
+
+.imagenes img:hover {
+  scale: 1.15;
+  z-index: 1;
+  transition-duration: 50ms;
+}
+
+.imagenes .linea {
+  height: 50%;
+  background-color: beige;
+}
+
+.img-larga {
+  width: 55%;
+}
+
+.img-corta {
+  width: 35%;
+}
+
+/* Main info-nutricional */
+.info-nutricional {
+  width: max-content;
+  padding: 0 2rem;
+}
+
+.info-nutricional dl {
+  margin-left: 2rem;
+}
