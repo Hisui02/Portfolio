@@ -30,16 +30,20 @@ h3 {
 
 blockquote {
   border-left: 4px solid purple;
-  padding: 0 0.5rem;
+  background-color: #fff;
+  padding: 1rem 0.5rem;
   font-style: italic;
   font-weight: bolder;
   font-size: 1.5rem;
+  margin: 2rem 0.5rem;
+  box-shadow: 5px 5px 10px black;
 }
 
 #wrapper {
   background-color: var(--bg-color);
   margin: auto;
-  width: 80%;
+  width: 95%;
+  margin: 2rem auto 2rem auto;
   padding: 2rem;
 }
 
@@ -51,13 +55,14 @@ blockquote {
 /* Main */
 .main {
   display: flex;
-  height: 100%;
   align-items: center;
+  flex-direction: column;
   justify-content: space-between;
-  padding: 2rem 0;
 }
 
-.main .parte-2 {
+.main .texto {
+  display: flex;
+  flex-direction: column;
 }
 
 /* Main ingredientes */
@@ -74,12 +79,13 @@ blockquote {
   font-size: larger;
 }
 
-/* Main imagenes */
-.imagenes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+/* Main info-nutricional */
+
+.info-nutricional dl {
+  margin-left: 2rem;
 }
+
+/* Main imagenes */
 
 .imagenes img {
   object-fit: cover;
@@ -93,24 +99,38 @@ blockquote {
 }
 
 .imagenes .linea {
+  display: flex;
   height: 50%;
-  background-color: beige;
 }
 
-.img-larga {
+.imagenes .img-larga {
   width: 55%;
 }
 
-.img-corta {
-  width: 35%;
+.imagenes .img-corta {
+  width: 45%;
 }
 
-/* Main info-nutricional */
-.info-nutricional {
-  width: max-content;
-  padding: 0 2rem;
+@media screen and (min-width: 640px) {
+  .main .texto {
+    flex-direction: row;
+  }
 }
 
-.info-nutricional dl {
-  margin-left: 2rem;
+@media screen and (min-width: 768px) {
+  #wrapper {
+    width: 80%;
+  }
+
+  .main {
+    flex-direction: row-reverse;
+  }
+
+  .main .texto {
+    flex-direction: column;
+  }
+
+  blockquote {
+    margin: 2rem 4rem;
+  }
 }
