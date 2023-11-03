@@ -6,37 +6,62 @@
 /*          comentario: Trabajo l. marcas           */
 /****************************************************/
 
+@font-face {
+  font-family: Butchery;
+  src: url("../public/fonts/Butchery.ttf");
+}
+@font-face {
+  font-family: Arvo;
+  src: url("../public/fonts/Arvo-Regular.ttf");
+}
+@font-face {
+  font-family: Abril-Fatface;
+  src: url("../public/fonts/AbrilFatface-Regular.ttf");
+}
+
 :root {
-  --title-color: #9a3b3b;
+  /* --title-color: #9a3b3b;
   --text-color: #c08261;
-  --bg-color: #f2ecbe;
+  --bg-color: #f2ecbe; */
+
+  --title-color: #952323;
+  --text-color: #c08261;
+  --bg-color: #f2e8c6;
 }
 
 * {
   box-sizing: border-box;
 }
 
+html::-webkit-scrollbar {
+  display: none;
+}
+
 body {
-  background-color: lightblue;
+  background-image: url("../public/img/bg1.jpg");
   margin: 0;
   padding: 0;
   color: var(--text-color);
+  font-family: Arvo;
 }
 
 h2,
 h3 {
   color: var(--title-color);
+  margin: 0;
+  font-family: Butchery;
+  font-size: 3rem;
 }
 
 blockquote {
-  border-left: 4px solid purple;
+  border-left: 4px solid #952323;
   background-color: #fff;
   padding: 1rem 0.5rem;
   font-style: italic;
-  font-weight: bolder;
   font-size: 1.5rem;
   margin: 2rem 0.5rem;
   box-shadow: 5px 5px 10px black;
+  font-family: Abril-Fatface;
 }
 
 #wrapper {
@@ -47,9 +72,22 @@ blockquote {
   padding: 2rem;
 }
 
+.card {
+  background-color: #fff;
+  margin: 0.5rem 0;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
 .titulo {
   text-align: center;
-  border-bottom: 2px solid purple;
+  color: var(--title-color);
+  font-family: "Butchery";
+  background-color: white;
+  font-size: 4.2rem;
+  padding: 1rem 2rem;
+  box-shadow: 5px 5px 10px black;
+  border-radius: 20px;
 }
 
 /* Main */
@@ -65,14 +103,16 @@ blockquote {
   flex-direction: column;
 }
 
+.main .texto .card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 /* Main ingredientes */
 .ingredientes {
   height: 100%;
   width: 100%;
-}
-
-.ingredientes h2 {
-  font-size: xx-large;
 }
 
 .ingredientes li {
@@ -81,8 +121,13 @@ blockquote {
 
 /* Main info-nutricional */
 
-.info-nutricional dl {
-  margin-left: 2rem;
+.info-nutricional dt {
+  font-size: larger;
+  margin-top: 0.2rem;
+}
+
+.info-nutricional dd {
+  font-size: large;
 }
 
 /* Main imagenes */
@@ -110,10 +155,18 @@ blockquote {
 .imagenes .img-corta {
   width: 45%;
 }
+/* Preparación */
+.preparacion {
+  margin-bottom: 1rem;
+}
 
 @media screen and (min-width: 640px) {
   .main .texto {
     flex-direction: row;
+  }
+
+  .main .texto .card {
+    margin: 1rem 0.5rem;
   }
 }
 
@@ -128,6 +181,10 @@ blockquote {
 
   .main .texto {
     flex-direction: column;
+    margin-right: 2rem;
+  }
+  .main .texto .card {
+    /* margin: 0 2rem; */
   }
 
   blockquote {
