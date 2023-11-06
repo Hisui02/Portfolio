@@ -1,0 +1,40 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-image: url("../public/img/background.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+#window {
+  width: 73px;
+  height: 107px;
+  border: 2px solid white;
+  position: absolute;
+  top: 225px;
+  left: 515px;
+}
+#pumpkin {
+  width: 73px;
+  height: 77px;
+  border: 2px solid white;
+  position: absolute;
+  top: 677px;
+  left: 478px;
+}
+#sky {
+  width: 380px;
+  height: 292px;
+  border: 2px solid white;
+  position: absolute;
+  top: 6px;
+  left: 907px;
+}
+#horses {
+  width: 283px;
+  height: 207px;
+  border: 2px solid white;
+  position: absolute;
+  top: 523px;
+  left: 959px;
+}
