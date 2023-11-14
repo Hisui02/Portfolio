@@ -1,40 +1,78 @@
 body {
   padding: 0;
   margin: 0;
+}
+
+main {
+  margin: auto;
+  height: 768px;
+  width: 1366px;
   background-image: url("../public/img/background.jpg");
-  background-size: cover;
   position: relative;
 }
 
-#window {
+#ceiling {
+  z-index: 5;
   width: 73px;
   height: 107px;
   border: 2px solid white;
   position: absolute;
-  top: 225px;
-  left: 515px;
+  top: 109px;
+  left: 493px;
 }
+
+#ghost-img {
+  width: 58px;
+  height: 72px;
+  position: absolute;
+  top: 127px;
+  left: 502px;
+}
+
 #pumpkin {
+  z-index: 5;
   width: 73px;
   height: 77px;
   border: 2px solid white;
   position: absolute;
-  top: 677px;
-  left: 478px;
+  top: 650px;
+  left: 455px;
 }
+
+#pumpkin-img {
+  width: 41px;
+  height: 44px;
+  visibility: hidden;
+  position: absolute;
+  top: 670px;
+  left: 472px;
+}
+
 #sky {
+  z-index: 5;
   width: 380px;
   height: 292px;
   border: 2px solid white;
   position: absolute;
   top: 6px;
-  left: 907px;
+  left: 820px;
 }
+
+#thunder-img {
+  visibility: hidden;
+  width: 380px;
+  height: 292px;
+  position: absolute;
+  top: 6px;
+  left: 820px;
+}
+
 #horses {
+  z-index: 5;
   width: 283px;
   height: 207px;
   border: 2px solid white;
   position: absolute;
-  top: 523px;
-  left: 959px;
+  top: 492px;
+  left: 905px;
 }

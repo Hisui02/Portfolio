@@ -5,11 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Halloween</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/index.js"></script>
   </head>
   <body>
-    <div id="window"></div>
-    <div id="pumpkin"></div>
-    <div id="sky"></div>
-    <div id="horses"></div>
+    <main>
+      <div id="ceiling"></div>
+      <img id="ghost-img" src="./public/img/ghost.png" alt="ghost" />
+      <div
+        id="pumpkin"
+        onmouseover="show('pumpkin-img')"
+        onmouseleave="hide('pumpkin-img')"
+      ></div>
+      <img id="pumpkin-img" src="./public/img/pumpkin.png" alt="pumpkin" />
+      <div
+        id="sky"
+        onmouseover="show('thunder-img')"
+        onmouseleave="hide('thunder-img')"
+      ></div>
+      <img id="thunder-img" src="./public/img/thunder.png" alt="thunder" />
+      <div id="horses"></div>
+      <audio controls>
+        <source src="./public/audio/horses.mp3" type="audio/mp3" />
+      </audio>
+    </main>
   </body>
 </html>
