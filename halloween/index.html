@@ -9,7 +9,11 @@
   </head>
   <body>
     <main>
-      <div id="ceiling"></div>
+      <div
+        id="ceiling"
+        onmouseover="show('ghost-img');sound('jumpscare-sound');"
+        onmouseleave="hide('ghost-img');silence('jumpscare-sound');"
+      ></div>
       <img id="ghost-img" src="./public/img/ghost.png" alt="ghost" />
       <div
         id="pumpkin"
@@ -19,14 +23,29 @@
       <img id="pumpkin-img" src="./public/img/pumpkin.png" alt="pumpkin" />
       <div
         id="sky"
-        onmouseover="show('thunder-img')"
-        onmouseleave="hide('thunder-img')"
+        onmouseover="show('thunder-img');sound('thunder-sound');"
+        onmouseleave="hide('thunder-img');silence('thunder-sound');"
       ></div>
       <img id="thunder-img" src="./public/img/thunder.png" alt="thunder" />
-      <div id="horses"></div>
-      <audio controls>
+      <div
+        id="horses"
+        onmouseover="sound('horse-sound')"
+        onmouseleave="silence('horse-sound')"
+      ></div>
+      <audio id="horse-sound">
         <source src="./public/audio/horses.mp3" type="audio/mp3" />
       </audio>
+      <audio id="jumpscare-sound">
+        <source src="./public/audio/jumpscare.mp3" type="audio/mp3" />
+      </audio>
+      <audio id="thunder-sound">
+        <source src="./public/audio/thunder.mp3" type="audio/mp3" />
+      </audio>
+      <div id="text">
+        <h1>` Happy halloween @</h1>
+        <p>At my house, 11:00 PM</p>
+        <p>We'll have so much fun!</p>
+      </div>
     </main>
   </body>
 </html>
